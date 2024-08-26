@@ -30,13 +30,14 @@ main()
 <script type="text/javascript" src="webgl-utils.js"></script>
 <script type="text/javascript" src="initShaders.js"></script>
 <script type="text/javascript" src="MV.js"></script>
-<script type="text/javascript" src="gasket-a.js"></script>
+<script type="module" src="gasket-a.js"></script>
 <script type="text/javascript" src="gasket-b.js"></script>
 <script type="module" src="circlefan.js"></script>
 <script type="module">
+  import * as d1a from './gasket-a.js';
   import * as d2 from './circlefan.js';
   window.onload = function() {
-    init_a();
+    d1a.init();
     init_b();
     d2.init();
   };
@@ -46,9 +47,9 @@ main()
 <body>
   <article id="d1">
     <h2>Dæmi 1</h2>
-    <section id="d1-a">
+    <section id="d1a">
       <h3>a.</h3>
-      <canvas id="1a" width="512" height="512">
+      <canvas id="d1a-canvas" width="512" height="512">
         Oops ... your browser doesn't support the HTML5 canvas element
       </canvas>
     </section>
