@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<title>2D Sierpinski Gasket</title>
+<title>Heimadæmi 2</title>
 
 <script id="vertex-shader" type="x-shader/x-vertex">
 attribute vec4 vPosition;
@@ -32,17 +32,40 @@ main()
 <script type="text/javascript" src="MV.js"></script>
 <script type="text/javascript" src="gasket-a.js"></script>
 <script type="text/javascript" src="gasket-b.js"></script>
-<script type="text/javascript">
-  window.onload = function() { init_a(); init_b(); };
+<script type="module" src="circlefan.js"></script>
+<script type="module">
+  import * as d2 from './circlefan.js';
+  window.onload = function() {
+    init_a();
+    init_b();
+    d2.init();
+  };
 </script>
 </head>
 
 <body>
-<canvas id="1a" width="512" height="512">
-Oops ... your browser doesn't support the HTML5 canvas element
-</canvas>
-<canvas id="1b" width="512" height="512">
-Oops ... your browser doesn't support the HTML5 canvas element
-</canvas>
+  <article id="d1">
+    <h2>Dæmi 1</h2>
+    <section id="d1-a">
+      <h3>a.</h3>
+      <canvas id="1a" width="512" height="512">
+        Oops ... your browser doesn't support the HTML5 canvas element
+      </canvas>
+    </section>
+
+    <section id="d1-b">
+      <h3>b.</h3>
+      <canvas id="1b" width="512" height="512">
+        Oops ... your browser doesn't support the HTML5 canvas element
+      </canvas>
+    </section>
+  </article>
+  <article id="d2">
+    <h2>Dæmi 2</h2>
+    <canvas id="d2-canvas" width="512" height="512">
+      Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+    <input name="d2-slider" id="d2-slider" type="range" value="3" min="3" max="50"/>
+  </article>
 </body>
 </html>
