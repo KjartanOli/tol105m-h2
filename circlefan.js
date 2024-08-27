@@ -1,6 +1,5 @@
 "use strict";
 
-let canvas = null;
 let gl = null;
 let program = null;
 let num_points = 3;
@@ -8,7 +7,7 @@ let center = vec2(0, 0);
 let radius = 0.5;
 
 export function init() {
-	canvas = document.querySelector("#d2-canvas");
+	const canvas = document.querySelector("#d2-canvas");
 	gl = WebGLUtils.setupWebGL(canvas);
 
 	if ( !gl ) { alert( "WebGL isn't available" ); }
