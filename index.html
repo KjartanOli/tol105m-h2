@@ -34,14 +34,16 @@ main()
 <script type="module" src="gasket-b.js"></script>
 <script type="module" src="circlefan.js"></script>
 <script type="module" src="clickpoints.js"></script>
+<script type="module" src="d5.js"></script>
 <script type="module">
   import * as d1a from './gasket-a.js';
   import * as d1b from './gasket-b.js';
   import * as d2 from './circlefan.js';
   import * as d3 from './L-shape-fan.js';
   import * as d4 from './clickpoints.js';
+  import * as d5 from './d5.js';
   window.onload = function() {
-    [d1a,d1b,d2,d3,d4].forEach(m => m.init());
+    [d1a,d1b,d2,d3,d4,d5].forEach(async m => m.init());
   };
 </script>
 </head>
@@ -81,6 +83,23 @@ main()
     <canvas id="d4-canvas" width="512" height="512">
       Oops ... your browser doesn't support the HTML5 canvas element
     </canvas>
+  </article>
+  <article id="d5">
+    <h2>Dæmi 5</h2>
+    <canvas id="d5-canvas" width="512" height="512">
+      Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+    <label for="shape">
+      Teppi:
+      <input name="shape" type="radio" value="0" checked="true"/>
+    </label>
+    <label for="shape">
+      Þríhyrningur:
+      <input name="shape" type="radio" value="1"/>
+    </label>
+    <label for="max-depth">
+      <input name="max-depth" type="range" value="3" min="0" max="7"/>
+    </label>
   </article>
 </body>
 </html>
