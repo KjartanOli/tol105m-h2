@@ -33,13 +33,15 @@ main()
 <script type="module" src="gasket-a.js"></script>
 <script type="module" src="gasket-b.js"></script>
 <script type="module" src="circlefan.js"></script>
+<script type="module" src="clickpoints.js"></script>
 <script type="module">
   import * as d1a from './gasket-a.js';
   import * as d1b from './gasket-b.js';
   import * as d2 from './circlefan.js';
   import * as d3 from './L-shape-fan.js';
+  import * as d4 from './clickpoints.js';
   window.onload = function() {
-    [d1a,d1b,d2,d3].forEach(m => m.init());
+    [d1a,d1b,d2,d3,d4].forEach(m => m.init());
   };
 </script>
 </head>
@@ -71,6 +73,12 @@ main()
   <article id="d3">
     <h2>Dæmi 3</h2>
     <canvas id="d3-canvas" width="512" height="512">
+      Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+  </article>
+  <article id="d4">
+    <h2>Dæmi 4</h2>
+    <canvas id="d4-canvas" width="512" height="512">
       Oops ... your browser doesn't support the HTML5 canvas element
     </canvas>
   </article>
