@@ -37,10 +37,9 @@ main()
   import * as d1a from './gasket-a.js';
   import * as d1b from './gasket-b.js';
   import * as d2 from './circlefan.js';
+  import * as d3 from './L-shape-fan.js';
   window.onload = function() {
-    d1a.init();
-    d1b.init();
-    d2.init();
+    [d1a,d1b,d2,d3].forEach(m => m.init());
   };
 </script>
 </head>
@@ -68,6 +67,12 @@ main()
       Oops ... your browser doesn't support the HTML5 canvas element
     </canvas>
     <input name="d2-slider" id="d2-slider" type="range" value="3" min="3" max="50"/>
+  </article>
+  <article id="d3">
+    <h2>Dæmi 3</h2>
+    <canvas id="d3-canvas" width="512" height="512">
+      Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
   </article>
 </body>
 </html>
